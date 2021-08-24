@@ -1,0 +1,43 @@
+# This is a basic workflow to help you get started with Actions
+
+name: cron
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+  schedule:
+    # 北京时间每天凌晨5点
+    - cron: '0 21 * * *'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  bot:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Set node env
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      # Runs a single command using the runners shell
+      - name: Set env
+        env:
+          YUQUE_USER_TOKEN=${{ secrets.YUQUE_USER_TOKEN }}
+          YUQUE_LOGIN=${{ secrets.YUQUE_LOGIN }}
+          YUQUE_REPOS=${{ secrets.YUQUE_REPOS }}
+          GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
+          GITHUB_LOGIN=${{ secrets.GITHUB_LOGIN }}
+          GITHUB_REPO=${{ secrets.GITHUB_REPO }}
+        run: npm install
+      # Runs a set of commands using the runners shell
+      - name: Run start
+        run: npm run start
