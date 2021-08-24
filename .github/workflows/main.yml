@@ -22,7 +22,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      # Checks-out your repository under $GH_WORKSPACE, so your job can access it
       - name: Set node env
         uses: actions/setup-node@v1
         with:
@@ -34,9 +34,9 @@ jobs:
           YUQUE_USER_TOKEN=${{ secrets.YUQUE_USER_TOKEN }}
           YUQUE_LOGIN=${{ secrets.YUQUE_LOGIN }}
           YUQUE_REPOS=${{ secrets.YUQUE_REPOS }}
-          GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
-          GITHUB_LOGIN=${{ secrets.GITHUB_LOGIN }}
-          GITHUB_REPO=${{ secrets.GITHUB_REPO }}
+          GH_TOKEN=${{ secrets.GH_TOKEN }}
+          GH_LOGIN=${{ secrets.GH_LOGIN }}
+          GH_REPO=${{ secrets.GH_REPO }}
         run: npm install
       # Runs a set of commands using the runners shell
       - name: Run start

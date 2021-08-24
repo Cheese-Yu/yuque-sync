@@ -4,7 +4,8 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
-    "dev": "NODE_ENV=local node lib/index.js"
+    "dev": "NODE_ENV=local node lib/index.js",
+    "start": "node lib/index.js"
   },
   "author": "",
   "license": "ISC",
