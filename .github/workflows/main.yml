@@ -29,7 +29,10 @@ jobs:
         with:
           node-version: '12.x'
 
-      - name: Set env variable
+      - name: Install
+        run: npm install
+
+      - name: Set env variable && Run start
         env:
           YUQUE_USER_TOKEN: ${{ secrets.YUQUE_USER_TOKEN }}
           YUQUE_LOGIN: ${{ secrets.YUQUE_LOGIN }}
@@ -37,7 +40,4 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GH_LOGIN: ${{ secrets.GH_LOGIN }}
           GH_REPO: ${{ secrets.GH_REPO }}
-        run: npm install
-      # Runs a set of commands using the runners shell
-      - name: Run start
         run: npm run start
