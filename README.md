@@ -9,7 +9,7 @@
 * `GH_TOKEN=xxx` github token
 * `GH_LOGIN=xxx` github 账号域名
 * `GH_REPO=xxx` github 项目名称
-> 语雀地址 https://www.yuque.com/${client.namespace}/${post.slug}
+
 
 ## Changelog
 ### V1.1.0
