@@ -7,8 +7,8 @@ on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
   schedule:
-    # 北京时间每天凌晨5点
-    - cron: '0 21 * * *'
+    # 北京时间每周三凌晨5点
+    - cron: '0 21 ? * WED'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
