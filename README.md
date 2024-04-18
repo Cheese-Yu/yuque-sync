@@ -10,7 +10,8 @@
 * `GH_LOGIN=xxx` github 账号域名, `eg: Cheese-Yu`
 * `GH_REPO=xxx` github 项目名称, `eg: blog-self`
 
-![yuque](yuque.png)
+<br/> 
+<img src="./yuque.png" width="400px">
 
 
 ## Changelog
