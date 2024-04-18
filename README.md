@@ -13,6 +13,11 @@
 <br/> 
 <img src="./yuque.png" width="400px">
 
+## TODO
+- [x] 支持上传图片到GitHub
+- [ ] 支持删除文章
+- [ ] 支持删除目录
+
 
 ## Changelog
 ### V1.2.0
